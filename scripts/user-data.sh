@@ -101,8 +101,6 @@ openssl req -new -x509 -days 365 -key ca.key -subj "/C=CN/ST=GD/L=SZ/O=Acme, Inc
 openssl req -newkey rsa:2048 -nodes -keyout server.key -subj "/C=CN/ST=GD/L=SZ/O=Acme, Inc./CN=${dns_hostname}.${dns_zonename}" -out server.csr
 openssl x509 -req -extfile <(printf "subjectAltName=DNS:${dns_hostname}.${dns_zonename}") -days 365 -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt
 
-
-
 # create the configuration file for replicated installation
 cat > /tmp/tfe_settings.json <<EOF
 {
