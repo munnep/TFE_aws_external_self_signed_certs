@@ -91,7 +91,7 @@ ssh_tfe_server_ip = "ssh ubuntu@13.51.23.34"
 tfe_appplication = "https://patrick-tfe3.bg.hashicorp-success.com"
 tfe_dashboard = "https://patrick-tfe3.bg.hashicorp-success.com:8800"
 ```
-- Connect to the TFE dashboard. This could take 10 minutes before fully functioning
+- Connect to the TFE dashboard. This could take 10 minutes before fully functioning. Because of the self signed certificates your browser could not let you continue to the website. Depending on the browser approve the certificate or decline it. 
 - Click on the open button to create your organization and workspaces
 
 # TODO
