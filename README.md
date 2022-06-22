@@ -33,10 +33,8 @@ We will be using AWS. Make sure you have the following
 See the following documentation [How to install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 
 ## TLS certificate
-You need to have valid TLS certificates that can be used with the DNS name you will be using to contact the TFE instance.  
+On the EC2 instance that is started some self-signed certificates will be created to be used during the TFE installation
   
-The repo assumes you have no certificates and want to create them using Let's Encrypt and that your DNS domain is managed under AWS. 
-
 # How to
 
 - Clone the repository to your local machine
