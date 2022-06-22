@@ -91,7 +91,7 @@ apt-get update
 apt-get -y install awscli
 aws s3 cp s3://${tag_prefix}-software/${filename_license} /tmp/${filename_license}
 
-# Generating self-signed certificates changed it to upload/download self specified certificates
+# Generating self-signed certificates
 mkdir -p /tmp
 pushd /tmp
 
