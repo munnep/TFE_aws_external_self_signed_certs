@@ -81,7 +81,7 @@ if [ $? -ne 0 ]; then
 	mount -a
 fi
 
-# Netdata will be listening on port 19999
+# Netdata performance monitor tool will be listening on port 19999
 curl -sL https://raw.githubusercontent.com/automodule/bash/main/install_netdata.sh | bash
 
 # install requirements for tfe
@@ -91,7 +91,7 @@ apt-get update
 apt-get -y install awscli
 aws s3 cp s3://${tag_prefix}-software/${filename_license} /tmp/${filename_license}
 
-# Generating self-signed certificates 
+# Generating self-signed certificates changed it to upload/download self specified certificates
 mkdir -p /tmp
 pushd /tmp
 
@@ -111,7 +111,7 @@ cat > /tmp/tfe_settings.json <<EOF
         "value": "${tfe_password}"
     },
     "hairpin_addressing": {
-        "value": "1"
+        "value": "0"
     },
     "hostname": {
         "value": "${dns_hostname}.${dns_zonename}"
